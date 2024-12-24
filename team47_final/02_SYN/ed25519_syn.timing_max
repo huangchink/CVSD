@@ -1,0 +1,860 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : ed25519
+Version: U-2022.12
+Date   : Sat Dec 14 21:55:58 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: R_4697 (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: modmul0/uut/mult3/DP_OP_18J4_122_7050/R_6113
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  R_4697/CK (DFFHQX4)                                     0.00 #     0.50 r
+  R_4697/Q (DFFHQX4)                                      0.18       0.68 r
+  U23353/Y (NAND4X2)                                      0.14       0.82 f
+  U53264/Y (OAI21X4)                                      0.17       1.00 r
+  U42661/Y (NAND3X6)                                      0.11       1.11 f
+  U46501/Y (NOR2X8)                                       0.14       1.25 r
+  U43927/Y (NAND2X4)                                      0.10       1.34 f
+  U56108/Y (NOR2X8)                                       0.11       1.45 r
+  U23260/Y (BUFX12)                                       0.16       1.61 r
+  U33535/Y (INVX16)                                       0.07       1.69 f
+  U22897/Y (OAI22XL)                                      0.15       1.84 r
+  U27538/Y (OR4X2)                                        0.25       2.09 r
+  U53417/Y (NAND2X2)                                      0.11       2.20 f
+  U49267/Y (OAI21X4)                                      0.13       2.32 r
+  U45285/Y (AOI21X4)                                      0.08       2.40 f
+  U77452/Y (OA21X4)                                       0.19       2.59 f
+  U51352/Y (OAI2BB1X4)                                    0.09       2.68 r
+  U45299/Y (NAND3X6)                                      0.09       2.77 f
+  U51350/Y (NAND2X8)                                      0.11       2.88 r
+  U46573/Y (INVX12)                                       0.08       2.96 f
+  U22265/Y (OA21X2)                                       0.26       3.22 f
+  U52294/Y (OAI2BB1X4)                                    0.15       3.37 f
+  U22022/Y (BUFX6)                                        0.15       3.52 f
+  U50685/Y (INVX20)                                       0.11       3.63 r
+  U88186/Y (XNOR2X1)                                      0.18       3.82 f
+  U88187/Y (OAI22XL)                                      0.31       4.12 r
+  U36293/Y (OAI21XL)                                      0.12       4.24 f
+  U25455/Y (NAND2XL)                                      0.15       4.39 r
+  U20425/CO (ADDFX2)                                      0.46       4.85 r
+  U90124/S (ADDFX1)                                       0.44       5.29 f
+  U90125/S (ADDFX1)                                       0.46       5.75 f
+  U56407/S (ADDFHX2)                                      0.40       6.15 f
+  U56406/S (ADDFHX2)                                      0.28       6.44 f
+  U35081/Y (CLKINVX1)                                     0.07       6.51 r
+  U34894/Y (XOR2X1)                                       0.14       6.66 f
+  U45793/Y (XOR2X1)                                       0.16       6.82 f
+  U110656/S (ADDFX1)                                      0.41       7.23 f
+  U56378/S (ADDFHX2)                                      0.40       7.63 f
+  U46673/CO (ADDFHX2)                                     0.29       7.93 f
+  U56474/S (ADDFHX2)                                      0.29       8.22 f
+  U111170/Y (NAND2X2)                                     0.07       8.29 r
+  U34290/Y (CLKINVX1)                                     0.08       8.37 f
+  U44168/Y (AOI21X2)                                      0.13       8.50 r
+  U46887/Y (OAI21X2)                                      0.10       8.59 f
+  U53787/Y (AOI21X4)                                      0.10       8.69 r
+  U49261/Y (OAI21X4)                                      0.08       8.77 f
+  U47065/Y (CLKINVX6)                                     0.05       8.82 r
+  U45507/Y (NAND2X8)                                      0.08       8.90 f
+  U44096/Y (OAI2BB1X2)                                    0.15       9.05 f
+  U15958/Y (AOI21X1)                                      0.11       9.16 r
+  U26941/Y (XOR2X1)                                       0.17       9.33 f
+  U122939/S (ADDFHX2)                                     0.31       9.64 r
+  U45064/Y (NOR2X6)                                       0.07       9.70 f
+  U15588/Y (NOR2X6)                                       0.07       9.78 r
+  U33910/Y (NAND2X4)                                      0.06       9.84 f
+  U27319/Y (NOR2X2)                                       0.11       9.94 r
+  U122960/Y (OAI2BB1X4)                                   0.16      10.10 r
+  U122961/Y (INVX3)                                       0.05      10.15 f
+  U125411/Y (OAI21X1)                                     0.11      10.26 r
+  modmul0/uut/mult3/DP_OP_18J4_122_7050/R_6113/D (DFFHQX4)
+                                                          0.00      10.26 r
+  data arrival time                                                 10.26
+
+  clock i_clk (rise edge)                                10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  modmul0/uut/mult3/DP_OP_18J4_122_7050/R_6113/CK (DFFHQX4)
+                                                          0.00      10.40 r
+  library setup time                                     -0.14      10.26
+  data required time                                                10.26
+  --------------------------------------------------------------------------
+  data required time                                                10.26
+  data arrival time                                                -10.26
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: R_4697 (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: modmul0/uut/mult3/DP_OP_18J4_122_7050/R_6109
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  R_4697/CK (DFFHQX4)                                     0.00 #     0.50 r
+  R_4697/Q (DFFHQX4)                                      0.18       0.68 r
+  U23353/Y (NAND4X2)                                      0.14       0.82 f
+  U53264/Y (OAI21X4)                                      0.17       1.00 r
+  U42661/Y (NAND3X6)                                      0.11       1.11 f
+  U46501/Y (NOR2X8)                                       0.14       1.25 r
+  U43927/Y (NAND2X4)                                      0.10       1.34 f
+  U56108/Y (NOR2X8)                                       0.11       1.45 r
+  U23260/Y (BUFX12)                                       0.16       1.61 r
+  U33535/Y (INVX16)                                       0.07       1.69 f
+  U22897/Y (OAI22XL)                                      0.15       1.84 r
+  U27538/Y (OR4X2)                                        0.25       2.09 r
+  U53417/Y (NAND2X2)                                      0.11       2.20 f
+  U49267/Y (OAI21X4)                                      0.13       2.32 r
+  U45285/Y (AOI21X4)                                      0.08       2.40 f
+  U77452/Y (OA21X4)                                       0.19       2.59 f
+  U51352/Y (OAI2BB1X4)                                    0.09       2.68 r
+  U45299/Y (NAND3X6)                                      0.09       2.77 f
+  U51350/Y (NAND2X8)                                      0.11       2.88 r
+  U46573/Y (INVX12)                                       0.08       2.96 f
+  U22265/Y (OA21X2)                                       0.26       3.22 f
+  U52294/Y (OAI2BB1X4)                                    0.15       3.37 f
+  U22022/Y (BUFX6)                                        0.15       3.52 f
+  U50685/Y (INVX20)                                       0.11       3.63 r
+  U88186/Y (XNOR2X1)                                      0.18       3.82 f
+  U88187/Y (OAI22XL)                                      0.31       4.12 r
+  U36293/Y (OAI21XL)                                      0.12       4.24 f
+  U25455/Y (NAND2XL)                                      0.15       4.39 r
+  U20425/CO (ADDFX2)                                      0.46       4.85 r
+  U90124/S (ADDFX1)                                       0.44       5.29 f
+  U90125/S (ADDFX1)                                       0.46       5.75 f
+  U56407/S (ADDFHX2)                                      0.40       6.15 f
+  U56406/S (ADDFHX2)                                      0.28       6.44 f
+  U35081/Y (CLKINVX1)                                     0.07       6.51 r
+  U34894/Y (XOR2X1)                                       0.14       6.66 f
+  U45793/Y (XOR2X1)                                       0.16       6.82 f
+  U110656/S (ADDFX1)                                      0.41       7.23 f
+  U56378/S (ADDFHX2)                                      0.40       7.63 f
+  U46673/CO (ADDFHX2)                                     0.29       7.93 f
+  U56474/S (ADDFHX2)                                      0.29       8.22 f
+  U111170/Y (NAND2X2)                                     0.07       8.29 r
+  U34290/Y (CLKINVX1)                                     0.08       8.37 f
+  U44168/Y (AOI21X2)                                      0.13       8.50 r
+  U46887/Y (OAI21X2)                                      0.10       8.59 f
+  U53787/Y (AOI21X4)                                      0.10       8.69 r
+  U49261/Y (OAI21X4)                                      0.08       8.77 f
+  U47065/Y (CLKINVX6)                                     0.05       8.82 r
+  U45507/Y (NAND2X8)                                      0.08       8.90 f
+  U44096/Y (OAI2BB1X2)                                    0.15       9.05 f
+  U15958/Y (AOI21X1)                                      0.11       9.16 r
+  U26941/Y (XOR2X1)                                       0.17       9.33 f
+  U122939/S (ADDFHX2)                                     0.31       9.64 r
+  U45064/Y (NOR2X6)                                       0.07       9.70 f
+  U15588/Y (NOR2X6)                                       0.07       9.78 r
+  U33910/Y (NAND2X4)                                      0.06       9.84 f
+  U27319/Y (NOR2X2)                                       0.11       9.94 r
+  U122960/Y (OAI2BB1X4)                                   0.16      10.10 r
+  U122961/Y (INVX3)                                       0.05      10.15 f
+  U125408/Y (OAI21X1)                                     0.11      10.26 r
+  modmul0/uut/mult3/DP_OP_18J4_122_7050/R_6109/D (DFFHQX4)
+                                                          0.00      10.26 r
+  data arrival time                                                 10.26
+
+  clock i_clk (rise edge)                                10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  modmul0/uut/mult3/DP_OP_18J4_122_7050/R_6109/CK (DFFHQX4)
+                                                          0.00      10.40 r
+  library setup time                                     -0.14      10.26
+  data required time                                                10.26
+  --------------------------------------------------------------------------
+  data required time                                                10.26
+  data arrival time                                                -10.26
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: R_4697 (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: modmul0/uut/mult3/DP_OP_18J4_122_7050/R_6111
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  R_4697/CK (DFFHQX4)                                     0.00 #     0.50 r
+  R_4697/Q (DFFHQX4)                                      0.18       0.68 r
+  U23353/Y (NAND4X2)                                      0.14       0.82 f
+  U53264/Y (OAI21X4)                                      0.17       1.00 r
+  U42661/Y (NAND3X6)                                      0.11       1.11 f
+  U46501/Y (NOR2X8)                                       0.14       1.25 r
+  U43927/Y (NAND2X4)                                      0.10       1.34 f
+  U56108/Y (NOR2X8)                                       0.11       1.45 r
+  U23260/Y (BUFX12)                                       0.16       1.61 r
+  U33535/Y (INVX16)                                       0.07       1.69 f
+  U22897/Y (OAI22XL)                                      0.15       1.84 r
+  U27538/Y (OR4X2)                                        0.25       2.09 r
+  U53417/Y (NAND2X2)                                      0.11       2.20 f
+  U49267/Y (OAI21X4)                                      0.13       2.32 r
+  U45285/Y (AOI21X4)                                      0.08       2.40 f
+  U77452/Y (OA21X4)                                       0.19       2.59 f
+  U51352/Y (OAI2BB1X4)                                    0.09       2.68 r
+  U45299/Y (NAND3X6)                                      0.09       2.77 f
+  U51350/Y (NAND2X8)                                      0.11       2.88 r
+  U46573/Y (INVX12)                                       0.08       2.96 f
+  U22265/Y (OA21X2)                                       0.26       3.22 f
+  U52294/Y (OAI2BB1X4)                                    0.15       3.37 f
+  U22022/Y (BUFX6)                                        0.15       3.52 f
+  U50685/Y (INVX20)                                       0.11       3.63 r
+  U88186/Y (XNOR2X1)                                      0.18       3.82 f
+  U88187/Y (OAI22XL)                                      0.31       4.12 r
+  U36293/Y (OAI21XL)                                      0.12       4.24 f
+  U25455/Y (NAND2XL)                                      0.15       4.39 r
+  U20425/CO (ADDFX2)                                      0.46       4.85 r
+  U90124/S (ADDFX1)                                       0.44       5.29 f
+  U90125/S (ADDFX1)                                       0.46       5.75 f
+  U56407/S (ADDFHX2)                                      0.40       6.15 f
+  U56406/S (ADDFHX2)                                      0.28       6.44 f
+  U35081/Y (CLKINVX1)                                     0.07       6.51 r
+  U34894/Y (XOR2X1)                                       0.14       6.66 f
+  U45793/Y (XOR2X1)                                       0.16       6.82 f
+  U110656/S (ADDFX1)                                      0.41       7.23 f
+  U56378/S (ADDFHX2)                                      0.40       7.63 f
+  U46673/CO (ADDFHX2)                                     0.29       7.93 f
+  U56474/S (ADDFHX2)                                      0.29       8.22 f
+  U111170/Y (NAND2X2)                                     0.07       8.29 r
+  U34290/Y (CLKINVX1)                                     0.08       8.37 f
+  U44168/Y (AOI21X2)                                      0.13       8.50 r
+  U46887/Y (OAI21X2)                                      0.10       8.59 f
+  U53787/Y (AOI21X4)                                      0.10       8.69 r
+  U49261/Y (OAI21X4)                                      0.08       8.77 f
+  U47065/Y (CLKINVX6)                                     0.05       8.82 r
+  U45507/Y (NAND2X8)                                      0.08       8.90 f
+  U44096/Y (OAI2BB1X2)                                    0.15       9.05 f
+  U15958/Y (AOI21X1)                                      0.11       9.16 r
+  U26941/Y (XOR2X1)                                       0.17       9.33 f
+  U122939/S (ADDFHX2)                                     0.31       9.64 r
+  U45064/Y (NOR2X6)                                       0.07       9.70 f
+  U15588/Y (NOR2X6)                                       0.07       9.78 r
+  U33910/Y (NAND2X4)                                      0.06       9.84 f
+  U27319/Y (NOR2X2)                                       0.11       9.94 r
+  U122960/Y (OAI2BB1X4)                                   0.16      10.10 r
+  U122961/Y (INVX3)                                       0.05      10.15 f
+  U57823/Y (OAI21X1)                                      0.11      10.26 r
+  modmul0/uut/mult3/DP_OP_18J4_122_7050/R_6111/D (DFFHQX4)
+                                                          0.00      10.26 r
+  data arrival time                                                 10.26
+
+  clock i_clk (rise edge)                                10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  modmul0/uut/mult3/DP_OP_18J4_122_7050/R_6111/CK (DFFHQX4)
+                                                          0.00      10.40 r
+  library setup time                                     -0.14      10.26
+  data required time                                                10.26
+  --------------------------------------------------------------------------
+  data required time                                                10.26
+  data arrival time                                                -10.26
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: R_7736 (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: modmul0/uut/mult3/DP_OP_18J4_122_7050/R_2970
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  R_7736/CK (DFFQX2)                                      0.00 #     0.50 r
+  R_7736/Q (DFFQX2)                                       0.40       0.90 f
+  U77062/Y (OAI222XL)                                     0.49       1.39 r
+  U77063/Y (INVXL)                                        0.17       1.56 f
+  U79567/Y (OAI22X1)                                      0.20       1.76 r
+  U79568/Y (AOI211X1)                                     0.10       1.86 f
+  U25620/Y (OAI211X1)                                     0.15       2.01 r
+  U79571/Y (NOR2X1)                                       0.10       2.11 f
+  U27817/Y (NOR2XL)                                       0.31       2.42 r
+  U79583/Y (NAND2X1)                                      0.16       2.58 f
+  U45706/Y (NOR2X2)                                       0.13       2.71 r
+  U79584/Y (NAND2X1)                                      0.07       2.78 f
+  U49317/Y (BUFX4)                                        0.17       2.95 f
+  U24731/Y (NOR2XL)                                       0.20       3.15 r
+  U79886/Y (NAND2X1)                                      0.11       3.26 f
+  U79890/Y (OAI21X2)                                      0.16       3.42 r
+  U48830/Y (XOR2X4)                                       0.15       3.57 r
+  U48829/Y (INVX3)                                        0.09       3.66 f
+  U21489/Y (INVX6)                                        0.15       3.81 r
+  U91337/Y (XNOR2X1)                                      0.20       4.00 f
+  U25177/Y (OAI22XL)                                      0.19       4.19 r
+  U91642/S (ADDFX1)                                       0.38       4.58 r
+  U91643/S (ADDFX1)                                       0.46       5.04 f
+  U54365/CO (ADDFHX2)                                     0.36       5.40 f
+  U48155/S (ADDFHX2)                                      0.28       5.68 r
+  U54371/S (ADDFHX2)                                      0.35       6.03 f
+  U91829/CO (ADDFHX4)                                     0.26       6.30 f
+  U45023/Y (INVX3)                                        0.06       6.36 r
+  U45596/Y (XOR2X4)                                       0.14       6.49 r
+  U44111/Y (XOR2X4)                                       0.13       6.63 r
+  U44110/Y (XNOR2X4)                                      0.16       6.79 r
+  U34874/Y (XNOR2X2)                                      0.20       6.98 f
+  U44989/Y (XOR2X4)                                       0.11       7.09 r
+  U44988/Y (XNOR2X2)                                      0.13       7.23 r
+  U44118/Y (XNOR2X1)                                      0.20       7.42 f
+  U92010/S (ADDFHX2)                                      0.29       7.71 r
+  U46056/Y (XOR2X2)                                       0.12       7.83 r
+  U46055/Y (XOR2X4)                                       0.15       7.98 r
+  U45598/Y (XOR2X4)                                       0.13       8.11 r
+  U45597/Y (XOR2X4)                                       0.16       8.27 r
+  U16632/Y (NOR2X6)                                       0.09       8.36 f
+  U26380/Y (NOR2X4)                                       0.10       8.46 r
+  U16534/Y (NAND2X4)                                      0.09       8.56 f
+  U16438/Y (BUFX2)                                        0.17       8.72 f
+  U92446/Y (NOR2X1)                                       0.14       8.86 r
+  U53798/Y (AOI21X2)                                      0.10       8.96 f
+  U53032/Y (XOR2X4)                                       0.10       9.06 r
+  U53030/Y (XOR2X2)                                       0.15       9.21 r
+  U92912/Y (NAND2X2)                                      0.07       9.28 f
+  U15837/Y (INVX1)                                        0.16       9.44 r
+  U46475/Y (AOI21X4)                                      0.10       9.54 f
+  U46301/Y (OAI21X4)                                      0.06       9.60 r
+  U46300/Y (NAND2X2)                                      0.07       9.68 f
+  U46460/Y (NAND2X4)                                      0.07       9.75 r
+  U47528/Y (INVX3)                                        0.05       9.79 f
+  U51312/Y (OAI21X2)                                      0.11       9.90 r
+  U113606/Y (AOI21X2)                                     0.08       9.98 f
+  U113615/Y (INVX4)                                       0.10      10.09 r
+  U125482/Y (AOI21X1)                                     0.08      10.16 f
+  modmul0/uut/mult3/DP_OP_18J4_122_7050/R_2970/D (DFFQX4)
+                                                          0.00      10.16 f
+  data arrival time                                                 10.16
+
+  clock i_clk (rise edge)                                10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  modmul0/uut/mult3/DP_OP_18J4_122_7050/R_2970/CK (DFFQX4)
+                                                          0.00      10.40 r
+  library setup time                                     -0.24      10.16
+  data required time                                                10.16
+  --------------------------------------------------------------------------
+  data required time                                                10.16
+  data arrival time                                                -10.16
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: R_7736 (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: modmul0/uut/mult3/DP_OP_18J4_122_7050/R_2968
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  R_7736/CK (DFFQX2)                                      0.00 #     0.50 r
+  R_7736/Q (DFFQX2)                                       0.40       0.90 f
+  U77062/Y (OAI222XL)                                     0.49       1.39 r
+  U77063/Y (INVXL)                                        0.17       1.56 f
+  U79567/Y (OAI22X1)                                      0.20       1.76 r
+  U79568/Y (AOI211X1)                                     0.10       1.86 f
+  U25620/Y (OAI211X1)                                     0.15       2.01 r
+  U79571/Y (NOR2X1)                                       0.10       2.11 f
+  U27817/Y (NOR2XL)                                       0.31       2.42 r
+  U79583/Y (NAND2X1)                                      0.16       2.58 f
+  U45706/Y (NOR2X2)                                       0.13       2.71 r
+  U79584/Y (NAND2X1)                                      0.07       2.78 f
+  U49317/Y (BUFX4)                                        0.17       2.95 f
+  U24731/Y (NOR2XL)                                       0.20       3.15 r
+  U79886/Y (NAND2X1)                                      0.11       3.26 f
+  U79890/Y (OAI21X2)                                      0.16       3.42 r
+  U48830/Y (XOR2X4)                                       0.15       3.57 r
+  U48829/Y (INVX3)                                        0.09       3.66 f
+  U21489/Y (INVX6)                                        0.15       3.81 r
+  U91337/Y (XNOR2X1)                                      0.20       4.00 f
+  U25177/Y (OAI22XL)                                      0.19       4.19 r
+  U91642/S (ADDFX1)                                       0.38       4.58 r
+  U91643/S (ADDFX1)                                       0.46       5.04 f
+  U54365/CO (ADDFHX2)                                     0.36       5.40 f
+  U48155/S (ADDFHX2)                                      0.28       5.68 r
+  U54371/S (ADDFHX2)                                      0.35       6.03 f
+  U91829/CO (ADDFHX4)                                     0.26       6.30 f
+  U45023/Y (INVX3)                                        0.06       6.36 r
+  U45596/Y (XOR2X4)                                       0.14       6.49 r
+  U44111/Y (XOR2X4)                                       0.13       6.63 r
+  U44110/Y (XNOR2X4)                                      0.16       6.79 r
+  U34874/Y (XNOR2X2)                                      0.20       6.98 f
+  U44989/Y (XOR2X4)                                       0.11       7.09 r
+  U44988/Y (XNOR2X2)                                      0.13       7.23 r
+  U44118/Y (XNOR2X1)                                      0.20       7.42 f
+  U92010/S (ADDFHX2)                                      0.29       7.71 r
+  U46056/Y (XOR2X2)                                       0.12       7.83 r
+  U46055/Y (XOR2X4)                                       0.15       7.98 r
+  U45598/Y (XOR2X4)                                       0.13       8.11 r
+  U45597/Y (XOR2X4)                                       0.16       8.27 r
+  U16632/Y (NOR2X6)                                       0.09       8.36 f
+  U26380/Y (NOR2X4)                                       0.10       8.46 r
+  U16534/Y (NAND2X4)                                      0.09       8.56 f
+  U16438/Y (BUFX2)                                        0.17       8.72 f
+  U92446/Y (NOR2X1)                                       0.14       8.86 r
+  U53798/Y (AOI21X2)                                      0.10       8.96 f
+  U53032/Y (XOR2X4)                                       0.10       9.06 r
+  U53030/Y (XOR2X2)                                       0.15       9.21 r
+  U92912/Y (NAND2X2)                                      0.07       9.28 f
+  U15837/Y (INVX1)                                        0.16       9.44 r
+  U46475/Y (AOI21X4)                                      0.10       9.54 f
+  U46301/Y (OAI21X4)                                      0.06       9.60 r
+  U46300/Y (NAND2X2)                                      0.07       9.68 f
+  U46460/Y (NAND2X4)                                      0.07       9.75 r
+  U47528/Y (INVX3)                                        0.05       9.79 f
+  U51312/Y (OAI21X2)                                      0.11       9.90 r
+  U113606/Y (AOI21X2)                                     0.08       9.98 f
+  U113615/Y (INVX4)                                       0.10      10.09 r
+  U125477/Y (AOI21X1)                                     0.08      10.16 f
+  modmul0/uut/mult3/DP_OP_18J4_122_7050/R_2968/D (DFFQX4)
+                                                          0.00      10.16 f
+  data arrival time                                                 10.16
+
+  clock i_clk (rise edge)                                10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  modmul0/uut/mult3/DP_OP_18J4_122_7050/R_2968/CK (DFFQX4)
+                                                          0.00      10.40 r
+  library setup time                                     -0.24      10.16
+  data required time                                                10.16
+  --------------------------------------------------------------------------
+  data required time                                                10.16
+  data arrival time                                                -10.16
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: R_4697 (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: modmul0/uut/mult2/DP_OP_18J4_123_256/R_7165
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  R_4697/CK (DFFHQX4)                                     0.00 #     0.50 r
+  R_4697/Q (DFFHQX4)                                      0.18       0.68 r
+  U23353/Y (NAND4X2)                                      0.14       0.82 f
+  U53264/Y (OAI21X4)                                      0.17       1.00 r
+  U42661/Y (NAND3X6)                                      0.11       1.11 f
+  U46501/Y (NOR2X8)                                       0.14       1.25 r
+  U48004/Y (INVX16)                                       0.09       1.34 f
+  U43936/Y (NAND2X8)                                      0.09       1.43 r
+  U42454/Y (INVX20)                                       0.08       1.52 f
+  U57900/Y (INVX20)                                       0.08       1.60 r
+  U50062/Y (OAI22X1)                                      0.10       1.70 f
+  U59444/Y (AOI211X1)                                     0.16       1.86 r
+  U24512/Y (AND3X2)                                       0.22       2.08 r
+  U52243/Y (XOR2X2)                                       0.13       2.21 r
+  U50061/Y (BUFX4)                                        0.21       2.42 r
+  U40840/Y (NAND2X6)                                      0.13       2.56 f
+  U21863/Y (BUFX6)                                        0.19       2.74 f
+  U72400/Y (OAI22XL)                                      0.13       2.87 r
+  U72640/CO (ADDFXL)                                      0.66       3.53 r
+  U39801/CO (ADDFX1)                                      0.47       4.00 r
+  U72889/CO (ADDFX1)                                      0.44       4.43 r
+  U73102/S (ADDFX1)                                       0.29       4.72 r
+  U73156/S (ADDFX1)                                       0.44       5.16 f
+  U73157/CO (ADDFX1)                                      0.28       5.45 f
+  U73189/S (ADDFX1)                                       0.39       5.84 f
+  U24318/Y (INVXL)                                        0.13       5.97 r
+  U73202/CO (ADDFX1)                                      0.39       6.36 r
+  U73275/S (ADDFX1)                                       0.39       6.75 f
+  U43918/S (ADDFX2)                                       0.45       7.20 f
+  U52004/Y (OAI21X1)                                      0.09       7.29 r
+  U36062/Y (OAI2BB1X1)                                    0.08       7.37 f
+  U43914/S (ADDFX2)                                       0.49       7.86 f
+  U49651/Y (NAND2X2)                                      0.08       7.94 r
+  U35686/Y (INVX1)                                        0.06       8.00 f
+  U44309/Y (AOI21X2)                                      0.15       8.16 r
+  U44310/Y (OAI21X2)                                      0.08       8.24 f
+  U50515/Y (AOI21X2)                                      0.10       8.33 r
+  U46960/Y (OA21X4)                                       0.17       8.50 r
+  U49182/Y (NAND2X8)                                      0.08       8.58 f
+  U44304/Y (OAI2BB1X2)                                    0.19       8.77 f
+  U47254/Y (AOI21X4)                                      0.10       8.87 r
+  U46967/Y (XOR2X4)                                       0.10       8.97 r
+  U76124/S (ADDFHX2)                                      0.28       9.25 f
+  U76125/Y (NOR2X2)                                       0.11       9.36 r
+  U53577/Y (OAI21X2)                                      0.09       9.45 f
+  U76851/Y (AOI21X2)                                      0.15       9.60 r
+  U47648/Y (OAI21X2)                                      0.12       9.72 f
+  U51074/Y (INVX1)                                        0.10       9.81 r
+  U124307/Y (OAI21XL)                                     0.10       9.91 f
+  U124309/Y (AOI21XL)                                     0.15      10.06 r
+  U124310/Y (OAI21XL)                                     0.08      10.14 f
+  modmul0/uut/mult2/DP_OP_18J4_123_256/R_7165/D (DFFQX1)
+                                                          0.00      10.14 f
+  data arrival time                                                 10.14
+
+  clock i_clk (rise edge)                                10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  modmul0/uut/mult2/DP_OP_18J4_123_256/R_7165/CK (DFFQX1)
+                                                          0.00      10.40 r
+  library setup time                                     -0.26      10.14
+  data required time                                                10.14
+  --------------------------------------------------------------------------
+  data required time                                                10.14
+  data arrival time                                                -10.14
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: R_6076 (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: modmul0/uut/mult2/DP_OP_18J4_123_256/R_7135
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  R_6076/CK (DFFHQX4)                                     0.00 #     0.50 r
+  R_6076/Q (DFFHQX4)                                      0.21       0.71 f
+  U51080/Y (INVX12)                                       0.07       0.78 r
+  U51079/Y (NAND2X8)                                      0.06       0.84 f
+  U52714/Y (NAND3X6)                                      0.06       0.90 r
+  U52712/Y (NAND2X6)                                      0.06       0.95 f
+  U42692/Y (NAND2X6)                                      0.07       1.02 r
+  U51466/Y (NAND2X4)                                      0.08       1.10 f
+  U51465/Y (NOR2X8)                                       0.11       1.21 r
+  U50491/Y (INVX8)                                        0.08       1.29 f
+  U23271/Y (INVX20)                                       0.07       1.36 r
+  U56108/Y (NOR2X8)                                       0.07       1.43 f
+  U23305/Y (BUFX12)                                       0.12       1.55 f
+  U54446/Y (BUFX20)                                       0.12       1.67 f
+  U59529/Y (AOI22X1)                                      0.17       1.84 r
+  U41986/Y (AND3X4)                                       0.24       2.07 r
+  U29357/Y (INVX3)                                        0.07       2.15 f
+  U60238/Y (XOR2X1)                                       0.22       2.36 r
+  U21871/Y (NAND2X6)                                      0.26       2.62 f
+  U49053/Y (OAI22XL)                                      0.18       2.80 r
+  U73094/CO (ADDFXL)                                      0.72       3.52 r
+  U39678/CO (ADDFX1)                                      0.39       3.91 r
+  U57606/CO (ADDFXL)                                      0.66       4.57 r
+  U73513/CO (ADDFX1)                                      0.41       4.98 r
+  U46749/S (ADDFX2)                                       0.47       5.45 f
+  U52944/Y (OAI21XL)                                      0.20       5.65 r
+  U31458/Y (OAI2BB1X1)                                    0.11       5.76 f
+  U28681/Y (CLKINVX1)                                     0.07       5.83 r
+  U73678/S (ADDFX1)                                       0.38       6.22 f
+  U73799/S (ADDFX1)                                       0.45       6.66 f
+  U73800/CO (ADDFX1)                                      0.37       7.03 f
+  U74784/CO (ADDFX1)                                      0.28       7.31 f
+  U74792/CO (ADDFX1)                                      0.40       7.72 f
+  U16660/Y (OR2X2)                                        0.28       7.99 f
+  U44299/Y (AOI21X4)                                      0.14       8.13 r
+  U16576/Y (OAI21X2)                                      0.10       8.23 f
+  U44324/Y (NAND2X2)                                      0.08       8.31 r
+  U49599/Y (NAND2BX4)                                     0.08       8.39 f
+  U16428/Y (INVX4)                                        0.08       8.47 r
+  U47701/Y (OAI21X1)                                      0.08       8.55 f
+  U47702/Y (AOI21X1)                                      0.12       8.67 r
+  U43909/Y (OAI21X1)                                      0.08       8.75 f
+  U16060/Y (AOI21X1)                                      0.11       8.86 r
+  U30047/Y (XOR2X1)                                       0.17       9.03 f
+  U56428/S (ADDFHX2)                                      0.27       9.30 r
+  U15649/Y (NAND2X1)                                      0.09       9.39 f
+  U43908/Y (OAI21X2)                                      0.20       9.59 r
+  U44579/Y (AOI21X4)                                      0.12       9.71 f
+  U34257/Y (INVX1)                                        0.10       9.81 r
+  U51109/Y (AOI21X1)                                      0.08       9.89 f
+  U15472/Y (OAI21XL)                                      0.20      10.09 r
+  U124246/Y (AOI21X1)                                     0.08      10.17 f
+  U124247/Y (OAI21X1)                                     0.07      10.24 r
+  modmul0/uut/mult2/DP_OP_18J4_123_256/R_7135/D (DFFHQX2)
+                                                          0.00      10.24 r
+  data arrival time                                                 10.24
+
+  clock i_clk (rise edge)                                10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  modmul0/uut/mult2/DP_OP_18J4_123_256/R_7135/CK (DFFHQX2)
+                                                          0.00      10.40 r
+  library setup time                                     -0.16      10.24
+  data required time                                                10.24
+  --------------------------------------------------------------------------
+  data required time                                                10.24
+  data arrival time                                                -10.24
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: R_4697 (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: modmul0/uut/mult1/DP_OP_18J3_123_3276/R_7358
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  R_4697/CK (DFFHQX4)                                     0.00 #     0.50 r
+  R_4697/Q (DFFHQX4)                                      0.18       0.68 r
+  U23353/Y (NAND4X2)                                      0.14       0.82 f
+  U53264/Y (OAI21X4)                                      0.17       1.00 r
+  U42661/Y (NAND3X6)                                      0.11       1.11 f
+  U46501/Y (NOR2X8)                                       0.14       1.25 r
+  U43927/Y (NAND2X4)                                      0.10       1.34 f
+  U56108/Y (NOR2X8)                                       0.11       1.45 r
+  U23305/Y (BUFX12)                                       0.12       1.57 r
+  U29447/Y (BUFX16)                                       0.11       1.68 r
+  U77556/Y (AOI22X1)                                      0.11       1.78 f
+  U77562/Y (NAND3X2)                                      0.14       1.92 r
+  U27754/Y (CLKINVX1)                                     0.13       2.05 f
+  U47604/Y (INVX6)                                        0.25       2.30 r
+  U93778/Y (XOR2X1)                                       0.17       2.47 r
+  U21816/Y (NAND2X1)                                      0.13       2.61 f
+  U32952/Y (BUFX12)                                       0.18       2.79 f
+  U107869/Y (OAI22XL)                                     0.14       2.93 r
+  U107918/CO (ADDFXL)                                     0.72       3.64 r
+  U107904/CO (ADDFX1)                                     0.41       4.06 r
+  U107899/CO (ADDFX1)                                     0.44       4.49 r
+  U107898/CO (ADDFX1)                                     0.39       4.88 r
+  U18816/S (ADDFX1)                                       0.40       5.28 f
+  U107910/CO (ADDFX1)                                     0.41       5.69 f
+  U50977/Y (INVXL)                                        0.12       5.81 r
+  U109052/S (ADDFX1)                                      0.30       6.11 r
+  U109051/CO (ADDFX1)                                     0.47       6.57 r
+  U50967/Y (XNOR2X1)                                      0.18       6.75 f
+  U50966/Y (XNOR2X1)                                      0.18       6.93 f
+  U50465/Y (OAI21X1)                                      0.09       7.03 r
+  U17397/Y (OAI2BB1X1)                                    0.08       7.11 f
+  U17095/Y (OAI21XL)                                      0.10       7.21 r
+  U35903/Y (OAI2BB1X1)                                    0.10       7.31 f
+  U109344/S (ADDFX1)                                      0.44       7.75 f
+  U26148/Y (NAND2XL)                                      0.13       7.87 r
+  U109274/Y (CLKINVX1)                                    0.11       7.98 f
+  U49951/Y (AOI21X2)                                      0.16       8.15 r
+  U47568/Y (OAI21X2)                                      0.10       8.25 f
+  U46269/Y (AOI21X2)                                      0.13       8.38 r
+  U46815/Y (OA21X4)                                       0.16       8.53 r
+  U34940/Y (NAND2X6)                                      0.08       8.62 f
+  U34886/Y (BUFX4)                                        0.13       8.74 f
+  U44318/Y (AOI21X1)                                      0.10       8.85 r
+  U53338/Y (OAI2BB1X1)                                    0.07       8.92 f
+  U53339/Y (XOR2X1)                                       0.15       9.07 f
+  U15774/S (ADDFX1)                                       0.30       9.37 r
+  U15657/Y (NOR2X1)                                       0.10       9.47 f
+  U56705/Y (OAI21X1)                                      0.18       9.65 r
+  U125858/Y (CLKINVX1)                                    0.07       9.72 f
+  U26736/Y (OAI21XL)                                      0.20       9.92 r
+  U125859/Y (AOI21X1)                                     0.07       9.99 f
+  U125860/Y (OAI21XL)                                     0.09      10.08 r
+  U56197/Y (AOI21XL)                                      0.08      10.17 f
+  U53073/Y (OAI21X1)                                      0.07      10.24 r
+  modmul0/uut/mult1/DP_OP_18J3_123_3276/R_7358/D (DFFHQX2)
+                                                          0.00      10.24 r
+  data arrival time                                                 10.24
+
+  clock i_clk (rise edge)                                10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  modmul0/uut/mult1/DP_OP_18J3_123_3276/R_7358/CK (DFFHQX2)
+                                                          0.00      10.40 r
+  library setup time                                     -0.16      10.24
+  data required time                                                10.24
+  --------------------------------------------------------------------------
+  data required time                                                10.24
+  data arrival time                                                -10.24
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: R_6076 (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: modmul0/H0_r_reg[168]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock i_clk (rise edge)                  0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  R_6076/CK (DFFHQX4)                      0.00 #     0.50 r
+  R_6076/Q (DFFHQX4)                       0.20       0.70 r
+  U51080/Y (INVX12)                        0.06       0.76 f
+  U51079/Y (NAND2X8)                       0.06       0.82 r
+  U55460/Y (NAND4X4)                       0.08       0.90 f
+  U55459/Y (AOI21X4)                       0.11       1.01 r
+  U55573/Y (NAND2BX4)                      0.08       1.10 f
+  U51023/Y (NOR2X8)                        0.18       1.28 r
+  U50213/Y (INVX8)                         0.06       1.34 f
+  U49126/Y (NAND3X6)                       0.09       1.43 r
+  U50453/Y (INVX12)                        0.07       1.50 f
+  U77714/Y (BUFX12)                        0.15       1.65 f
+  U77715/Y (AOI22X1)                       0.16       1.82 r
+  U23070/Y (NAND4BX1)                      0.21       2.03 f
+  U21939/Y (CLKINVX1)                      0.15       2.18 r
+  U21774/Y (INVX4)                         0.17       2.35 f
+  U24152/Y (OAI21XL)                       0.24       2.59 r
+  U94585/Y (NAND2X1)                       0.11       2.69 f
+  U94613/Y (NAND2X1)                       0.12       2.81 r
+  U40621/Y (XOR2X2)                        0.27       3.08 r
+  U32838/Y (NAND2X2)                       0.11       3.20 f
+  U29097/Y (BUFX12)                        0.18       3.38 f
+  U95969/Y (OAI22XL)                       0.28       3.66 r
+  U96221/CO (ADDHXL)                       0.21       3.87 r
+  U95973/S (ADDFX1)                        0.30       4.17 r
+  U96518/CO (ADDFX1)                       0.44       4.61 r
+  U96264/CO (ADDFX1)                       0.43       5.05 r
+  U96265/CO (ADDFX1)                       0.22       5.26 r
+  U24574/CO (ADDFXL)                       0.70       5.96 r
+  U36674/CO (ADDFHX2)                      0.37       6.33 r
+  U96422/S (ADDFX1)                        0.51       6.84 f
+  U54284/S (ADDFHX2)                       0.34       7.18 f
+  U53908/CO (ADDFHX2)                      0.29       7.47 f
+  U45614/S (ADDFHX2)                       0.29       7.76 f
+  U54566/Y (NOR2X2)                        0.12       7.88 r
+  U44108/Y (OAI21X2)                       0.10       7.98 f
+  U35262/Y (AOI21X2)                       0.12       8.10 r
+  U50940/Y (OAI21X2)                       0.09       8.19 f
+  U48086/Y (AOI21X4)                       0.14       8.33 r
+  U16460/Y (INVX6)                         0.10       8.43 f
+  U16416/Y (AOI21X1)                       0.12       8.56 r
+  U30077/Y (XOR2X1)                        0.17       8.72 f
+  U56163/S (ADDFHX2)                       0.27       8.99 r
+  U16116/Y (NOR2X1)                        0.08       9.07 f
+  U46228/Y (OAI21X1)                       0.16       9.23 r
+  U47138/Y (AOI21X2)                       0.09       9.32 f
+  U50617/Y (OA21X4)                        0.21       9.53 f
+  U34161/Y (NAND2X6)                       0.12       9.64 r
+  U45053/Y (NAND2X6)                       0.07       9.72 f
+  U52201/Y (NAND2X8)                       0.09       9.81 r
+  U49760/Y (CLKINVX1)                      0.08       9.89 f
+  U49042/Y (NAND2BX2)                      0.15      10.03 f
+  U51020/Y (NAND2X2)                       0.07      10.10 r
+  U44920/Y (XOR2X4)                        0.11      10.21 f
+  U44919/Y (NOR2X2)                        0.07      10.28 r
+  modmul0/H0_r_reg[168]/D (DFFHQX4)        0.00      10.28 r
+  data arrival time                                  10.28
+
+  clock i_clk (rise edge)                 10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  modmul0/H0_r_reg[168]/CK (DFFHQX4)       0.00      10.40 r
+  library setup time                      -0.12      10.28
+  data required time                                 10.28
+  -----------------------------------------------------------
+  data required time                                 10.28
+  data arrival time                                 -10.28
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: R_4697 (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: modmul0/L0_r_reg[163]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock i_clk (rise edge)                  0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  R_4697/CK (DFFHQX4)                      0.00 #     0.50 r
+  R_4697/Q (DFFHQX4)                       0.18       0.68 r
+  U23353/Y (NAND4X2)                       0.14       0.82 f
+  U53264/Y (OAI21X4)                       0.17       1.00 r
+  U42661/Y (NAND3X6)                       0.11       1.11 f
+  U46501/Y (NOR2X8)                        0.14       1.25 r
+  U48004/Y (INVX16)                        0.09       1.34 f
+  U54918/Y (NAND2X8)                       0.10       1.44 r
+  U48220/Y (BUFX20)                        0.13       1.56 r
+  U23282/Y (INVX12)                        0.07       1.63 f
+  U49473/Y (AOI22X1)                       0.17       1.80 r
+  U41964/Y (INVX2)                         0.07       1.87 f
+  U23095/Y (NOR2X2)                        0.10       1.97 r
+  U24941/Y (NAND2X4)                       0.10       2.07 f
+  U55471/Y (XNOR2X2)                       0.18       2.25 r
+  U53964/Y (BUFX4)                         0.19       2.44 r
+  U44321/Y (NAND2X2)                       0.08       2.52 f
+  U40875/Y (BUFX8)                         0.19       2.71 f
+  U66081/Y (OAI22XL)                       0.15       2.85 r
+  U66285/CO (ADDFXL)                       0.68       3.53 r
+  U66516/CO (ADDFXL)                       0.58       4.11 r
+  U66748/CO (ADDFXL)                       0.63       4.74 r
+  U67418/S (ADDFX2)                        0.49       5.22 f
+  U51224/S (ADDFHX4)                       0.33       5.55 f
+  U19419/CO (ADDFHX1)                      0.31       5.86 f
+  U31263/Y (INVX2)                         0.10       5.96 r
+  U53834/S (ADDFHX2)                       0.28       6.24 f
+  U51221/Y (INVXL)                         0.09       6.32 r
+  U51220/Y (NAND2BX1)                      0.06       6.38 f
+  U51219/Y (NAND2XL)                       0.09       6.47 r
+  U51218/Y (OAI2BB1X1)                     0.08       6.55 f
+  U45950/Y (XOR2X1)                        0.14       6.69 f
+  U25301/Y (XOR2X1)                        0.27       6.96 r
+  U49387/CO (ADDFHX2)                      0.34       7.29 r
+  U53523/S (ADDFHX2)                       0.29       7.58 f
+  U55430/Y (OR2X4)                         0.17       7.76 f
+  U54427/Y (NAND2X2)                       0.07       7.83 r
+  U30354/Y (INVX2)                         0.05       7.88 f
+  U30263/Y (NAND2X2)                       0.08       7.97 r
+  U28180/Y (INVX3)                         0.06       8.03 f
+  U30135/Y (NAND3X4)                       0.08       8.11 r
+  U30122/Y (NAND2X4)                       0.09       8.20 f
+  U48236/Y (AOI21X4)                       0.17       8.36 r
+  U54532/Y (INVX8)                         0.12       8.48 f
+  U55135/Y (AOI21X1)                       0.18       8.67 r
+  U55638/Y (XOR2X4)                        0.17       8.83 f
+  U55635/Y (OAI21X4)                       0.06       8.89 r
+  U26829/Y (OAI2BB1X1)                     0.09       8.98 f
+  U34492/Y (OR2X4)                         0.18       9.16 f
+  U76829/Y (AOI21X1)                       0.11       9.28 r
+  U45759/Y (OAI21X1)                       0.12       9.40 f
+  U45758/Y (AOI21X4)                       0.11       9.51 r
+  U47934/Y (OAI21X4)                       0.09       9.60 f
+  U52518/Y (AOI21X4)                       0.18       9.78 r
+  U54491/Y (INVX8)                         0.09       9.87 f
+  U55081/Y (NAND3BX2)                      0.07       9.95 r
+  U54253/Y (NAND3X1)                       0.08      10.03 f
+  U55080/Y (XOR2X1)                        0.16      10.18 f
+  U47222/Y (NOR2X2)                        0.09      10.27 r
+  modmul0/L0_r_reg[163]/D (DFFHQX4)        0.00      10.27 r
+  data arrival time                                  10.27
+
+  clock i_clk (rise edge)                 10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  modmul0/L0_r_reg[163]/CK (DFFHQX4)       0.00      10.40 r
+  library setup time                      -0.12      10.28
+  data required time                                 10.28
+  -----------------------------------------------------------
+  data required time                                 10.28
+  data arrival time                                 -10.27
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
